@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+<title>YIELTOR</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="{% static 'layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
+</head>
+<style>
+ body{
+     background:url("/static/images/img3.webp") 50% 0 no-repeat fixed;
+		 	background-size: 1400px 800px;
+     color: white;
+     height: 650px;
+     padding: 20px 0 0 0;
+     0}
+
+</style>
+
+<button style="float:right;background-color:#26619c;padding:13px;margin-right:100px ; margin-top:40px;"><a href="{% url 'fertilizerform'  %}" style="text-align: right; m"> YIELTOR</a></button>
+<body id="top">
+	<h1 style="font-size:80px; color:#104F0E ; background-color: white; margin:10px;margin-bottom: 10px; margin-right: 700px; font-family: monospace;serif;">YIELTOR</h1>
+  <p style="font-size:20px; color: #ffffff ; letter-spacing: normal; line-height: normal; margin-right:550px">In-country like India, the majority of the population is dependent on agriculture for their livelihood. Many new technologies, such as Machine Learning and Deep Learning, are being implemented into agriculture so that it is easier for farmers to grow and maximize their yield. Yieltor has farmer friendly Options which takes few dataset of the land/soil as input & results in the type of the crop that can be grown on the land <em></em></p>
+  <p style="font-size: 20px; color:white;"><a href="{% url 'fertilizerform'  %}" style="text-align: right; m"><b>About this site</a></b></p>
+
+
+<div>
+<nav style='background-color:Olive;'>
+
+
+
+</nav>
+</div>
+
+
+
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="{% static 'layout/scripts/jquery.min.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.backtotop.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.mobilemenu.js' %}"></script>
+</body>
+</html>
