@@ -1,0 +1,106 @@
+	{% load static %}
+<!DOCTYPE html>
+
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+<title>YIELTOR</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="{% static 'layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+
+
+<div class="wrapper row1">
+  <header id="header" class="hoc clear">
+
+    <div id="logo" class="one_half first">
+      <h1 class="logoname"><a href="fertilizerform.html"><span>YIELTOR</a></h1>
+    </div>
+   <!-- <div class="one_half">
+      <ul class="nospace clear">
+        <li class="one_half first">
+          <div class="block clear"><i class="fas fa-phone"></i> <span><strong class="block">Call Us:</strong> +00 (123) 456 7890</span> </div>
+        </li>
+        <li class="one_half">
+          <div class="block clear"><i class="far fa-clock"></i> <span><strong class="block"> Mon. - Sat.:</strong> 08.00am - 18.00pm</span> </div>
+        </li>
+      </ul>
+    </div>-->
+
+  </header>
+<style>
+#pageintro{
+     background: url("/static/images/img1.jpg")50% 0 no-repeat fixed;
+		 background-size: 1600px 800px;
+     color: white;
+	  /* Full height */
+
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+	background-attachment:scroll;
+     height: 750px;
+     padding: 10px 0 0 0;
+     }
+
+     input{
+      border: 2px solid white;
+      border-radius: 5px;
+      padding: 10px 30px;
+      animation: moves 1s;
+      position: relative;
+     }
+
+     @keyframes moves{
+    from{
+      left: -150px;
+    }
+    to{
+      left: 0px;
+    }
+  }
+
+</style>
+</div>
+  {% block content %}
+<div class="wrapper bgded overlay" ">
+  <div id="pageintro" >
+
+
+      <p></p>
+      <h3 class="heading"></h3>
+      <p></p>
+      <div>
+	  <h1 style="color:black;background-color:white;margin-left:450px;margin-right:450px;">YIELTOR Predictions</h1>
+      <p class="nospace btmspace-15">.</p>
+      <center><form method="post" action="{% url 'fertilizerRf'  %}">
+        {% csrf_token %}
+
+
+          <input class="btmspace-15" type="text" name="headline1" placeholder="Enter NITROGEN" style="background-color:black;">
+          <input class="btmspace-15" type="text" name="headline2" placeholder="Enter PHOSPHORUS" style="background-color:black;">
+          <input class="btmspace-15" type="text" name="headline3" placeholder="Enter POTASSIUM" style="background-color:black;">
+          <input class="btmspace-15" type="text" name="headline4" placeholder="Enter TEMPERATURE" style="background-color:black;">
+          <input class="btmspace-15" type="text" name="headline5" placeholder="Enter HUMIDITY" style="background-color:black;">
+          <input class="btmspace-15" type="text" name="headline6" placeholder="Enter PH" style="background-color:black;">
+          <input class="btmspace-15" type="text" name="headline7" placeholder="Enter RAINFALL" style="background-color:black;">
+          <button type="submit" value="submit" style="background-color:rgb(59, 102, 81);color:white; padding: 20px 40px;">Submit</button>
+
+      </form></center></div>
+
+
+  </div>
+</div>
+
+{% endblock %}
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="{% static 'layout/scripts/jquery.min.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.backtotop.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.mobilemenu.js' %}"></script>
+</body>
+</html>
